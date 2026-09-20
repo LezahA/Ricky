@@ -2,8 +2,8 @@
 
 import os
 import json
+import time
 import random
-import asyncio
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
 # Modelos
@@ -24,7 +24,7 @@ from sklearn.metrics import (
 )
 
 # Banner inicial
-print("/n----------------------------------------------------------------")
+print("\n----------------------------------------------------------------")
 print("Ricky Chatbot Copyright (C) 2026  Hazel Azucena Calderon Bonilla")
 print("This program comes with ABSOLUTELY NO WARRANTY.")
 print("This is free software, and you are welcome to redistribute it")
@@ -126,12 +126,12 @@ pipeline.fit(preguntas,y)
 print("\nModelo final entrenado correctamente :)")
 
 # Funcion responder
-async def responder(textoEntrada, umbral=0.3):
+def responder(textoEntrada, umbral=0.3):
     # Con strip para limpiar posibles espacios en blanco
     textoEntrada = str(textoEntrada).strip()
 
-    # Esperar entre 2 y 3 segundos
-    await asyncio.sleep(random.randint(2, 3))
+    # Esperar de 2 a 3 segundos
+    time.sleep(random.randint(2, 3))
 
     # Por si el usuario no escribe nada
     if not textoEntrada:
@@ -150,6 +150,7 @@ async def responder(textoEntrada, umbral=0.3):
 
     # Obtener probabilidades
     scores = modeloSVC.decision_function(entradaUsuario)[0]
+
     indice_pred = int(np.argmax(scores))
     confianza = float(scores[indice_pred])
 
@@ -167,6 +168,3 @@ async def responder(textoEntrada, umbral=0.3):
         return respuesta
     else:
         return "Lo siento no tengo una respuesta para eso"
-
-# print("----------------------------------------------------")
-# print(asyncio.run(responder("ola")))

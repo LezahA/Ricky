@@ -3,9 +3,9 @@
 import os
 import sys
 import json
-import asyncio
+import threading
 from cerebro.cerebroChat import responder
-from PyQt6.QtCore import Qt, QCoreApplication, QEvent
+from PyQt6.QtCore import Qt, QCoreApplication, QEvent, QObject, pyqtSignal
 from config.configLoader import cargarConfig, getConfig
 from PyQt6.QtGui import QCursor, QGuiApplication, QFont, QFontDatabase
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QListWidget, QTextEdit, QPushButton, QHBoxLayout
@@ -66,6 +66,11 @@ def cargarFuente():
             print(f"Error al cargar la fuente {rutaFuente}")
 
     return fuente
+
+# Crear comunicador entre hilo principal y cerebroChat
+class Comunicador(QObject):
+    # Definir signal tipo string
+    respuestaLista = pyqtSignal(str)
 
 class ventanaChat(QWidget):
 
@@ -162,8 +167,23 @@ class ventanaChat(QWidget):
         self.chat_list.addItem(f"usuario: {mensaje}")
         self.input_text.clear()
         self.boton_send.setEnabled(True)
-        # Mostrar respuesta
-        self.mostrarRespuesta(asyncio.run(responder(mensaje)))
+
+        # Iniciar comunicación entre hilos
+        self.comunicador = Comunicador()
+        # Conectar con la funcion de mostrar respuesta
+        self.comunicador.respuestaLista.connect(self.mostrarRespuesta)
+
+        # Funcion para procesar respuesta
+        def responderSegundoPlano():
+            # Ejecuta el modelo sin congelar el resto de la interfaz...FUNCIONO
+            respuestaRicky = responder(mensaje)
+
+            # manda respuesta al hilo principal
+            self.comunicador.respuestaLista.emit(respuestaRicky)
+        
+        # Ejecutar la tarea en un hilo secundario
+        hiloResponder = threading.Thread(target=responderSegundoPlano)
+        hiloResponder.start()
     
     def mostrarRespuesta(self, respuesta):
         self.chat_list.addItem(f"asistente: {respuesta}")
