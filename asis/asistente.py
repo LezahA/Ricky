@@ -12,6 +12,11 @@ from config.configLoader import cargarConfig, getConfig
 # Cargar configuracion de personaje
 cargarConfig()
 character = getConfig("character")
+
+# Ruta base
+rutaBase = os.path.abspath(".")
+print("absolute path DESDE ASISTENTE: ", rutaBase)
+
 class Asistente:
     def __init__(self, label):
         self.label = label
@@ -69,32 +74,33 @@ class Asistente:
         return True
 
     def asisIdle(self):
-        ruta = f"./personajes/{character}/idle/"
+        ruta = rutaBase + f"/personajes/{character}/idle/"
+
         if self.cargarAnimacion(ruta):
             self.iniciarAnimacion(self.vAnimacion) # Velocidad para caminar
 
     def walkR(self):
-        ruta = f"./personajes/{character}/walkR/"
+        ruta = rutaBase + f"/personajes/{character}/walkR/"
         if self.cargarAnimacion(ruta):
             self.iniciarAnimacion(self.vAnimacion)  # Velocidad para caminar
 
     def walkL(self):
-        ruta = f"./personajes/{character}/walkL/"
+        ruta = rutaBase + f"/personajes/{character}/walkL/"
         if self.cargarAnimacion(ruta):
             self.iniciarAnimacion(self.vAnimacion)  # Velocidad para caminar
 
     def pensar(self):
-        ruta = f"./personajes/{character}/pensar/"
+        ruta = rutaBase + f"/personajes/{character}/pensar/"
         if self.cargarAnimacion(ruta):
             self.iniciarAnimacion(self.vAnimacion) # Velocidad para caminar
 
     def hablar(self):
-        ruta = f",/personajes/{character}/hablar/"
+        ruta = rutaBase + f"/personajes/{character}/hablar/"
         if self.cargarAnimacion(ruta):
             self.iniciarAnimacion(self.vAnimacion) # Velocidad para caminar
 
     def jump(self):
-        ruta = f"./personajes/{character}/jump/"
+        ruta = rutaBase + f"/personajes/{character}/jump/"
         if self.cargarAnimacion(ruta):
             self.iniciarAnimacion(self.vAnimacion) # Velocidad para caminar
 

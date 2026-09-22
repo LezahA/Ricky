@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import os
 import sys
 from asis.asistente import Asistente
 from PyQt6.QtCore import Qt, QPoint, QSize
@@ -29,7 +30,7 @@ class WidgetPrincipal(QLabel):
 
         # Ventana de chat
         self.chat = None
-        
+
     # Funciones mouse click izquierdo y chat click derecho
     def mousePressEvent(self, event):
         # Inicio del arrastre si es izquierda

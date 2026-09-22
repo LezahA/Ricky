@@ -5,9 +5,9 @@ import sys
 import json
 import threading
 from cerebro.cerebroChat import responder
-from PyQt6.QtCore import Qt, QCoreApplication, QEvent, QObject, pyqtSignal
 from config.configLoader import cargarConfig, getConfig
 from PyQt6.QtGui import QCursor, QGuiApplication, QFont, QFontDatabase
+from PyQt6.QtCore import Qt, QCoreApplication, QEvent, QObject, pyqtSignal
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QListWidget, QTextEdit, QPushButton, QHBoxLayout
 
 # Cargar configuracion de chat
@@ -155,11 +155,12 @@ class ventanaChat(QWidget):
         # Capturar Enter para enviar con QEvent.Type.KeyPress
         if event.type() == QEvent.Type.KeyPress:
             if event.key() == Qt.Key.Key_Return:
-                self.enviarMensaje()
+                # Probar enviar mensaje con asistente pensando
+                self.enviarMensaje(self.asistente)
                 return True
         return False
     
-    def enviarMensaje(self):
+    def enviarMensaje(self, asistente):
         mensaje = self.input_text.toPlainText().strip()
         if not mensaje:
             return
@@ -167,6 +168,9 @@ class ventanaChat(QWidget):
         self.chat_list.addItem(f"usuario: {mensaje}")
         self.input_text.clear()
         self.boton_send.setEnabled(True)
+
+        # asistente en modo pensar
+        asistente.pensar()
 
         # Iniciar comunicación entre hilos
         self.comunicador = Comunicador()
@@ -189,6 +193,9 @@ class ventanaChat(QWidget):
         self.chat_list.addItem(f"asistente: {respuesta}")
         self.boton_send.setEnabled(False)
         self.chat_list.scrollToBottom()
+
+        # asistente en modo hablar
+        self.asistente.hablar()
     
     def mostrarJuntoA(self, asistente):
         # si sobrepasa x de pantalla de la computadora
