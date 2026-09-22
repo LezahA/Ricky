@@ -3,6 +3,7 @@
     "fondo": "#233D4D",
     "fondoChat": "#B5D198",
     "input": "#B5D198",
-    "boton": "#FCCA46",
-    "botonHover": "#DB8199"
+    "boton": "#E6B740",
+    "botonHover": "#DB8199",
+    "respuestaFondo":"#A3BC88"
 }

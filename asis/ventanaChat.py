@@ -5,9 +5,9 @@ import json
 import threading
 from cerebro.cerebroChat import responder
 from config.configLoader import cargarConfig, getConfig
-from PyQt6.QtGui import QCursor, QGuiApplication, QFont, QFontDatabase
+from PyQt6.QtGui import QCursor, QGuiApplication, QFont, QFontDatabase, QColor, QBrush
 from PyQt6.QtCore import Qt, QCoreApplication, QEvent, QObject, pyqtSignal
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QListWidget, QTextEdit, QPushButton, QHBoxLayout
+from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QListWidget, QTextEdit, QPushButton, QHBoxLayout, QListWidgetItem
 
 # Cargar configuracion de chat
 cargarConfig()
@@ -26,6 +26,7 @@ else:
         input = datos["input"]
         boton = datos["boton"]
         botonHover = datos["botonHover"]
+        respuestaFondo = datos["respuestaFondo"]
     print("Perfil encontrado :)")
 
 # Funcion para cargar fuente
@@ -168,7 +169,7 @@ class ventanaChat(QWidget):
         if not mensaje:
             return
         # Agregar mensaje a la lista, limpiar input y habilitar boton de enviar
-        self.chat_list.addItem(f"usuario: {mensaje}")
+        self.chat_list.addItem(mensaje)
         self.input_text.clear()
         self.boton_send.setEnabled(True)
 
@@ -193,7 +194,12 @@ class ventanaChat(QWidget):
         hiloResponder.start()
     
     def mostrarRespuesta(self, respuesta):
-        self.chat_list.addItem(f"asistente: {respuesta}")
+        # Fondo respuesta
+        itemRespuesta = QListWidgetItem(respuesta)
+        itemRespuesta.setBackground(QBrush(QColor(f"{respuestaFondo}")))
+        # Agregar respuesta
+        self.chat_list.addItem(itemRespuesta)
+
         self.boton_send.setEnabled(False)
         self.chat_list.scrollToBottom()
 

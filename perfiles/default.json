@@ -4,5 +4,6 @@
     "fondoChat": "#FFEECF",
     "input": "#FFEECF",
     "boton": "#D36582",
-    "botonHover": "#DB8199"
+    "botonHover": "#DB8199",
+    "respuestaFondo":"#E5D4BA"
 }
