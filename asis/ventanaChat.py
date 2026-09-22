@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import os
-import sys
 import json
 import threading
 from cerebro.cerebroChat import responder
@@ -102,6 +101,10 @@ class ventanaChat(QWidget):
         layout.addWidget(header)
         
         self.chat_list = QListWidget()
+        # Para salto de linea
+        self.chat_list.setWordWrap(True)
+        self.chat_list.setResizeMode(QListWidget.ResizeMode.Adjust)
+
         self.chat_list.setStyleSheet(f"""
             QListWidget {{
                 background: {fondoChat};
