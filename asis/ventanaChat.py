@@ -1,14 +1,19 @@
 #!/usr/bin/python3
 
 import os
+import sys
 import json
 import threading
 from cerebro.cerebroChat import responder
 from config.configLoader import cargarConfig, getConfig
-from PyQt6.QtGui import QCursor, QGuiApplication, QFont, QFontDatabase, QColor, QBrush
+from PyQt6.QtGui import QCursor, QGuiApplication, QFont, QFontDatabase, QColor, QBrush, QPixmap
 from PyQt6.QtCore import Qt, QCoreApplication, QEvent, QObject, pyqtSignal
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QListWidget, QTextEdit, QPushButton, QHBoxLayout, QListWidgetItem
-
+# Probando para mientras ----------------------------------------------------------
+import warnings
+# Silencia las advertencias de limpieza de scikit-learn/loky al cerrar
+warnings.filterwarnings("ignore", category=UserWarning, module=".*resource_tracker")
+# ---------------------------------------------------------------------------------
 # Cargar configuracion de chat
 cargarConfig()
 perfil = getConfig("perfil")
@@ -81,23 +86,84 @@ class ventanaChat(QWidget):
         self.setup_ui()
     
     def setup_ui(self):
+        # Sobreponer chat
+        self.setWindowFlags(Qt.WindowType.FramelessWindowHint | Qt.WindowType.WindowStaysOnTopHint)
+
+        # Transparencia
+        self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
+
         self.setWindowTitle("Aun estoy pensando que nombre darle...")
         self.setFixedSize(400, 500)
         self.setStyleSheet(f"""
             ventanaChat {{
-                background-color: {fondo};
-                border: 2px solid {fondo};
                 border-radius: 15px;
             }}
         """)
-        
+
+        # Layout Principal
         layout = QVBoxLayout(self)
-        
+
+        # Layout botones
+        layoutBotones = QHBoxLayout()
+        layoutBotones.setSpacing(10)
+
+        # label para botones
+        botonCerrar = QPushButton()
+        botonRegresar = QPushButton()
+
+        # Tamaño de botones
+        botonCerrar.setFixedSize(30, 30)
+        botonRegresar.setFixedSize(30, 30)
+
+        # Cosa de css para los botones
+        botonCerrar.setStyleSheet(
+            """
+            QPushButton {
+                background-image: url('./perfiles/botones/cerrar.png');
+                background-color: transparent;
+                border: none;
+            }
+            QPushButton:hover {
+                background-color: rgba(255, 255, 255, 0.2); /* Efecto visual al pasar el mouse */
+                border-radius: 5px;
+            }
+        """
+        )
+
+        botonRegresar.setStyleSheet(
+            """
+            QPushButton {
+                background-image: url('./perfiles/botones/regresar.png');
+                background-color: transparent;
+                border: none;
+            }
+            QPushButton:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+                border-radius: 5px;
+            }
+        """
+        )
+
+        # Agregar botones al layout
+        layoutBotones.addWidget(botonCerrar)
+        layoutBotones.addWidget(botonRegresar)
+        # Stretch a la derecha
+        layoutBotones.addStretch()
+        # Conectar botones
+        botonRegresar.clicked.connect(self.close)
+        botonCerrar.clicked.connect(sys.exit)
+
+        layout.addLayout(layoutBotones)
+
+        # header encabezado
         header = QLabel("Habla con Ricky")
         header.setFont(cargarFuente())
         header.setStyleSheet(f"""
             color: {titulo};
+            background-color: {fondo};
             padding: 7px;
+            border: 2px solid {fondo};
+            border-radius: 15px;
         """)
         layout.addWidget(header)
         
@@ -117,7 +183,9 @@ class ventanaChat(QWidget):
         """)
         layout.addWidget(self.chat_list)
         
-        input_layout = QHBoxLayout()
+        # Layout input
+        inputLayout = QHBoxLayout()
+        # Barra input
         self.input_text = QTextEdit()
         self.input_text.setPlaceholderText("¿Cuál es tu pregunta?")
         self.input_text.setMaximumHeight(65)
@@ -131,11 +199,13 @@ class ventanaChat(QWidget):
                 color: #000000;
             }}
         """)
-        input_layout.addWidget(self.input_text)
-        
-        self.boton_send = QPushButton("Enviar")
-        self.boton_send.setMaximumWidth(100)
-        self.boton_send.setStyleSheet(f"""
+        inputLayout.addWidget(self.input_text)
+
+        # Boton enviar
+        self.botonEnviar = QPushButton("Enviar")
+        # Tamaño
+        self.botonEnviar.setMaximumWidth(100)
+        self.botonEnviar.setStyleSheet(f"""
             QPushButton {{
                 background: {boton};
                 color: #ffffff;
@@ -148,10 +218,14 @@ class ventanaChat(QWidget):
                 background: {botonHover};
             }}
         """)
-        self.boton_send.clicked.connect(self.enviarMensaje)
-        input_layout.addWidget(self.boton_send)
-        
-        layout.addLayout(input_layout)
+
+        # Agregar boton al layout
+        inputLayout.addWidget(self.botonEnviar)
+
+        # Conectar a funcion de enviarMensaje
+        self.botonEnviar.clicked.connect(self.enviarMensaje)
+
+        layout.addLayout(inputLayout)
         
         self.input_text.installEventFilter(self)
     
@@ -165,16 +239,18 @@ class ventanaChat(QWidget):
         return False
     
     def enviarMensaje(self, asistente):
+        # Establecer boton habilitado
+        self.botonEnviar.setEnabled(False)
+
         mensaje = self.input_text.toPlainText().strip()
         if not mensaje:
             return
         # Agregar mensaje a la lista, limpiar input y habilitar boton de enviar
         self.chat_list.addItem(mensaje)
         self.input_text.clear()
-        self.boton_send.setEnabled(True)
 
         # asistente en modo pensar
-        asistente.pensar()
+        self.asistente.pensar()
 
         # Iniciar comunicación entre hilos
         self.comunicador = Comunicador()
@@ -190,17 +266,18 @@ class ventanaChat(QWidget):
             self.comunicador.respuestaLista.emit(respuestaRicky)
         
         # Ejecutar la tarea en un hilo secundario
-        hiloResponder = threading.Thread(target=responderSegundoPlano)
+        hiloResponder = threading.Thread(target=responderSegundoPlano, daemon=True)
         hiloResponder.start()
-    
+
     def mostrarRespuesta(self, respuesta):
         # Fondo respuesta
         itemRespuesta = QListWidgetItem(respuesta)
         itemRespuesta.setBackground(QBrush(QColor(f"{respuestaFondo}")))
+
+        self.botonEnviar.setEnabled(True)
+
         # Agregar respuesta
         self.chat_list.addItem(itemRespuesta)
-
-        self.boton_send.setEnabled(False)
         self.chat_list.scrollToBottom()
 
         # asistente en modo hablar
