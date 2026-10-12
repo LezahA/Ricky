@@ -51,7 +51,7 @@
             ],
             "responses": [
                 "Hola, Soy Ricky tu asistente veterinario ¿En que puedo ayudarte? ",
-                "¡Hola! Soy Ricky tu asistente veterinario personal¿Qué te gustaría saber hoy?",
+                "¡Hola! Soy Ricky tu asistente veterinario personal ¿Qué te gustaría saber hoy?",
                 "Hola, Soy Ricky tu asistente veterinario personal :)"
             ]
         },
@@ -313,8 +313,7 @@
             ],
             "responses": [
                 "Los gatos senior (más de 7 u 8 años) necesitan alimentos de fácil digestión, bajos en calorías para cuidar sus riñones y articulaciones. ¿Tiene problemas para masticar?"
-            ],
-            "requiredContext": "esperandoEdadGato"
+            ]
         },
         {
         "tag": "alimentacionProhibida",

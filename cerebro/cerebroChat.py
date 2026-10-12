@@ -39,15 +39,20 @@ rutaIntents = os.path.join(rutaCerebro, "intents.json")
 with open(rutaIntents, 'r',encoding='utf-8') as dataset:
     data = json.load(dataset)
 
+# Variables
 tags = []
 preguntas = []
 respuestas = {}
+contextoReq = {}
+contextoSet = {}
+contextoActual = None
 
 # Preparar dataset
 for intent in data.get("intents", []):
     tag = intent.get("tag")
     patterns = intent.get("patterns", [])
     responseIntent = intent.get("responses", [])
+
     # Validar si no hay tag
     if not tag:
         print("Warning: intent sin tag")
@@ -64,6 +69,10 @@ for intent in data.get("intents", []):
         print(f"Warning: {tag} tiene menos de 3 preguntas")
 
     respuestas[tag] = responseIntent
+
+    # Guardar configuración de contextos 
+    contextoSet[tag] = intent.get("setContext", None)
+    contextoReq[tag] = intent.get("requiredContext", None)
 
     for pattern in patterns:
         if not isinstance(pattern, str) or not pattern.strip():
@@ -127,6 +136,8 @@ print("\nModelo final entrenado correctamente :)")
 
 # Funcion responder
 def responder(textoEntrada, umbral=0.3):
+    global contextoActual
+
     # Con strip para limpiar posibles espacios en blanco
     textoEntrada = str(textoEntrada).strip()
 
@@ -161,9 +172,22 @@ def responder(textoEntrada, umbral=0.3):
     # Obtener el tag predicho
     tag_predicho = labelEncoder.inverse_transform([indice_pred])[0]
 
+    # Obtener el contexto requerido del tag predicho
+    contextoRequerido = contextoReq.get(tag_predicho, None)
+
+    # Actualizar contexto actual
+    if contextoRequerido != contextoActual:
+
+        if contextoRequerido is None:
+            contextoActual = None
+
     opciones = respuestas.get(tag_predicho, [])
 
     if opciones:
+        # Actualizar contexto actual
+        contextoActual = contextoSet.get(tag_predicho, None)
+
+        # Responder
         respuesta = random.choice(opciones)
         return respuesta
     else:
