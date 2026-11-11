@@ -3,17 +3,17 @@
 import os
 import sys
 import json
+import warnings
 import threading
 from cerebro.cerebroChat import responder
 from config.configLoader import cargarConfig, getConfig
 from PyQt6.QtGui import QCursor, QGuiApplication, QFont, QFontDatabase, QColor, QBrush, QPixmap
 from PyQt6.QtCore import Qt, QCoreApplication, QEvent, QObject, pyqtSignal
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QListWidget, QTextEdit, QPushButton, QHBoxLayout, QListWidgetItem
-# Probando para mientras ----------------------------------------------------------
-import warnings
-# Silencia las advertencias de limpieza de scikit-learn/loky al cerrar
+
+# Silenciar las advertencias de limpieza de scikit-learn/loky al cerrar
 warnings.filterwarnings("ignore", category=UserWarning, module=".*resource_tracker")
-# ---------------------------------------------------------------------------------
+
 # Cargar configuracion de chat
 cargarConfig()
 perfil = getConfig("perfil")

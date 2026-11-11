@@ -6,9 +6,7 @@ import time
 import random
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
-# Modelos
-from sklearn.naive_bayes import ComplementNB
-from sklearn.linear_model import LogisticRegression
+# Modelo
 from sklearn.svm import LinearSVC
 # Para validacion cruzada estratificada
 from sklearn.model_selection import StratifiedKFold, cross_validate
@@ -22,6 +20,7 @@ from sklearn.metrics import (
     f1_score,
     classification_report
 )
+
 
 # Banner inicial
 print("\n----------------------------------------------------------------")
@@ -93,7 +92,7 @@ if len(set(tags)) < 2:
 labelEncoder = LabelEncoder()
 y = labelEncoder.fit_transform(tags)
 
-print(f"\nTotal de preguntas: {len(preguntas)}")
+print(f"Total de preguntas: {len(preguntas)}")
 print(f"Total de intents: {len(labelEncoder.classes_)}")
 
 # Pipeline con vectorizador y modelo
@@ -105,15 +104,15 @@ pipeline = Pipeline([
         strip_accents="unicode"
     )),
     ("modelo", LinearSVC(
-        C=1.0,
-        class_weight=None,
-        max_iter=2000,
-        dual=True
+        C=1.38,
+        class_weight="balanced",
+        max_iter=4000,
+        dual="auto"
     ))
 ])
 
 # Validación cruzada (nomas para evaluacion del pipeline)
-cv = StratifiedKFold( n_splits=5, shuffle=True, random_state=42)
+cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
 resultados = cross_validate(
     pipeline,
@@ -135,7 +134,7 @@ pipeline.fit(preguntas,y)
 print("\nModelo final entrenado correctamente :)")
 
 # Funcion responder
-def responder(textoEntrada, umbral=0.3):
+def responder(textoEntrada, umbral=0.2):
     global contextoActual
 
     # Con strip para limpiar posibles espacios en blanco

@@ -24,7 +24,7 @@
                 "Hola, Soy Ricky, como te puedo ayudar?",
                 "Hola, Soy Ricky, ¿En que puedo ayudarte?",
                 "Que tal! Soy Ricky, estoy aqui para ayudarte",
-                "Que tal! Soy Ricky, dime como puedo ayudarte"
+                "Que tal! Soy Ricky, tu asistente veterinario personal ¿dime como puedo ayudarte?"
             ]
         },
         {
@@ -52,6 +52,23 @@
                 "Nos vemos pronto, ¡éxitos!",
                 "Adiós, nos vemos a la proxima",
                 "Cuidate! Hasta luego"
+            ]
+        },
+        {
+        "tag": "agradecimiento",
+            "patterns": [
+                "gracias", "muchas gracias", "mil gracias", "muchísimas gracias", "gracias por la ayuda", "gracias ricky", "muchas gracias ricky",
+                "mil gracias ricky", "te lo agradezco", "te lo agradezco mucho", "gracias por la información", "gracias por los consejos", "gracias por responder",
+                "excelente gracias", "súper gracias", "gracias por cuidar a mi gato", "gracias por los tips para mi gata", "gracias amigo", "gracias michi asistente",
+                "ok gracias", "listo gracias", "gracias por todo", "me sirvió mucho gracias", "gracias me quedó muy claro", "vale gracias", "genial gracias", "perfecto gracias",
+                "gracias de verdad", "te agradezco mucho la ayuda", "gracias por tu tiempo", "muchas gracias por tu respuesta", "eres de gran ayuda gracias", "gracias ricky por los datos",
+                "gracias por la recomendación", "mil gracias por la explicación", "gracias por ayudarme con mi michi", "gracias ricky eres el mejor", "gracias por los primeros auxilios",
+                "muchas gracias por el apoyo", "gracias por responder tan rápido", "gracias por cuidar a mi gata", "agradecido por la respuesta", "gracias me sirvió la información",
+                "de acuerdo gracias", "entiendo gracias", "buenísimo gracias", "muchas gracias por la guía", "gracias por resolver mi duda", "gracias ricky te me cuidas", "gracias por la asesoría"
+            ],
+            "responses": [
+                "¡De nada! Fue un placer ayudarte a cuidar de tu felino. Aquí estaré siempre que necesites un consejo o tengas alguna duda sobre su salud y bienestar. ¡Un ronroneo y un abrazo! ",
+                "¡No hay de qué! Recuerda que la salud y felicidad de tu gato son lo más importante. Si te surge cualquier otra pregunta, aquí me tienes a un click de distancia. ¡Cuida mucho a ese consentido!"
             ]
         },
         {
@@ -89,22 +106,16 @@
         {
         "tag": "alimentacionGatoGatito",
             "patterns": [
-                "qué comida le doy a un gatito", "cómo alimentar a una gatita bebé", "qué puede comer un gatito pequeño", "qué alimento necesita un gatito de 2 meses",
-                "qué comida le doy a un gato de 3 meses", "qué puede comer un gato de 4 meses", "alimentación para gato de 5 meses",
-                "alimentación para gato de 6 meses", "mi gato es bebé qué le doy de comer", "mi gatito tiene pocos meses qué comida necesita",
-                "qué tipo de alimento necesita un gato cachorro", "dieta recomendada para un gatito", "cómo alimentar a un gato recién nacido",
-                "qué come un gatito huérfano", "qué leche le puedo dar a un gatito recién nacido", "puedo darle leche de vaca a una gatita bebé",
-                "fórmula de leche para gatitos", "cómo preparar leche para gatito cachorro", "un gatito de un mes qué puede comer", "qué darle de comer a un gato recién destetado",
-                "cómo destetar a un gatito", "a qué edad empiezan a comer croquetas los gatitos", "cuándo puede comer comida sólida un gatito",
-                "cómo hacer papilla para gatito destetado", "mi gatita ya dejó la leche qué le doy", "puedo darle croquetas a una gatita de 2 meses",
-                "qué croquetas son recomendadas para gatitos", "cómo ablandar las croquetas de un gatito", "es bueno darle comida húmeda a un gatito",
-                "sobres de comida para gatito cachorro", "debo comprar alimento kitten para mi gato", "qué significa alimento kitten", "hasta qué edad debe comer alimento kitten",
-                "cuántas veces al día debe comer una gatita", "cada cuántas horas come un gatito de un mes", "cuánta comida le debo servir a un gatito",
-                "qué cantidad de croquetas come un gatito", "porciones de comida para gato bebé", "cómo saber si mi gatito está comiendo lo suficiente",
-                "mi gatito está creciendo qué debe comer", "qué nutrientes necesita un gatito para desarrollarse", "dieta para el crecimiento de un gato cachorro",
-                "cuándo pasar de leche a comida sólida en gatos", "cómo introducir las croquetas a una gatita", "comida kitten seca o húmeda",
-                "puedo mezclar leche con croquetas para gatita", "guía de comida para gatitos de 0 a 6 meses", "consejos de alimentación para gatos cachorros",
-                "mejor dieta para gatitos pequeños", "alimentación en las primeras semanas de vida de un gato"
+                "qué comida le doy a un gatito bebé", "cómo alimentar a una gatita recién nacida", "qué puede comer un gato cachorro de 2 meses", "qué alimento necesita un gatito de 3 meses", "qué comida le doy a un gato de 4 meses", "alimentación recomendada para un gatito de 5 meses",
+                "qué puede comer un gato cachorro de 6 meses", "mi gata es bebé qué le doy de comer", "mi gatito tiene pocos meses qué comida necesita", "dieta recomendada para un gato bebé huérfano", "cómo alimentar a un gatito recién nacido sin madre", "qué leche le puedo dar a una gatita bebé recién nacida",
+                "fórmula de leche maternizada para gatitos pequeños", "cómo preparar leche en biberón para un gatito cachorro", "un gatito de un mes qué puede empezar a comer", "qué darle de comer a un gato recién destetado", "cómo hacer el proceso de destete en gatitos", "a qué edad empiezan a comer alimentos sólidos los gatitos",
+                "cómo hacer papilla de iniciación para gatito destetado", "mi gatita ya dejó la leche qué comida le introduzco", "puedo darle croquetas de cachorro a una gatita de 2 meses", "qué alimento enlatado o sobrecito es bueno para gatitos bebés", "cómo ablandar con agua tibia las croquetas de un gatito",
+                "es bueno darle comida húmeda especial para gatito cachorro", "hasta qué mes le debo dar alimento formulado como kitten", "qué nutrientes necesita un gatito para crecer fuerte", "cuántas veces al día debe comer un gatito de 2 o 3 meses", "cada cuántas horas se le da biberón a un gatito huérfano",
+                "porciones de comida recomendadas para un gato bebé", "cómo saber si mi gatito cachorro está comiendo lo suficiente", "dieta para el desarrollo óptimo de un gato cachorro", "cuándo pasar de leche maternizada a comida sólida en gatitos", "cómo introducir la croqueta seca kitten a una gatita de 2 meses",
+                "puedo combinar fórmula láctea con croqueta para gatita bebé", "guía de nutrición para gatitos cachorros de 0 a 6 meses", "consejos de alimentación para gatos bebés y lactantes", "dieta balanceada para gatitos en etapa de crecimiento temprano", "por qué la leche de vaca es mortal para un gatito bebé",
+                "qué croquetas para gato cachorro son más digeribles", "alimentación adecuada en las primeras semanas de vida del gato", "cómo alimentar a una camada de gatitos huérfanos", "qué alimentos caseros hervidos puede probar un gatito de 5 meses", "mi gatito de 3 meses pide mucha comida es normal",
+                "fórmula láctea felina de veterinaria para gatitos bebés", "cuándo darle comida húmeda kitten a mi gata de 4 meses", "nutrición inicial para gatos menores de medio año", "qué croquetas kitten son mejores para la mandíbula de un bebé", "cómo cuidar la digestión de una gatita recién destetada",
+                "frecuencia de tomas de alimento para gatos cachorros", "cuidados nutricionales para gatitos en sus primeros meses"
             ],
             "responses": [
                 "Si el gatito está con su madre, ella se encarga de todo. El dueño solo debe alimentar muy bien a la gata lactante con croquetas de cachorro, \n Pero por otro lado si es huerfano y tiene semanas de haber nacido, nunca se le debe dar leche de vaca, ya que les causa diarreas mortales. Se debe comprar leche de fórmula maternizada para gatitos en polvo (se puede conseguir en agroservicios o tiendas veterinarias) y dársela con biberón o jeringa cada 2-4 horas, de igual manera media vez cumplido un mes los gatitos pueden comer croquetas para gatito (Kitten) remojadas con agua tibia, cuando el gatito ya tiene de 2 a 6 meses ya puede comer croquetas secas para gato pequeño y alimentos como pollo, carne o pescado"
@@ -114,22 +125,16 @@
         {
         "tag": "alimentacionGatoJoven",
             "patterns": [
-                "qué alimento necesita un gato joven", "cuántas veces al día debe comer una gata joven", "cómo alimentar a un gato joven", "qué debe comer un gato de 7 meses",
-                "qué come un gato de 8 meses", "alimentación para un gato de 9 meses", "qué comida le doy a un gato de 10 meses",
-                "qué debe comer una gata de 11 meses", "mi gata cumplió un año qué debe comer", "mi gato tiene 1 año qué comida le doy","cómo alimentar a una gata de 2 años",
-                "qué come un gato de un año", "qué come una gata de un año", "dieta para una gata de año y medio", "dieta para un gato de año y medio", "qué comida necesita un gato de 2 años", "cómo alimentar a un gato de 2 años",
-                "cuándo cambiar de comida kitten a adulto", "a qué edad se deja de dar alimento kitten", "hasta qué mes le doy croquetas kitten a mi gato",
-                "mi gata tiene 10 meses todavía necesita kitten", "mi gata tiene 8 meses puede comer croquetas de adulto", "cómo hacer la transición de alimento gatito a adulto",
-                "qué pasa si mi gato de un año sigue comiendo comida de gatito", "puedo darle alimento kitten a un gato de un año", "puedo darle alimento kitten a un gato de 2 años",
-                "qué croquetas darle a un gato recién castrado", "comida para gato joven esterilizado", "mi gato de 8 meses fue castrado qué comida le doy",
-                "mi gata de un año fue esterilizada qué debe comer", "cómo evitar que mi gato joven suba de peso tras la esterilización", "pienso para gata joven esterilizada",
-                "cuántas veces al día debe comer una gata de un año", "cuántas veces come un gato de 2 años", "porciones de comida para gato de un año",
-                "cuántos gramos de croquetas come un gato de 2 años", "mi gato joven pide comida todo el día", "cómo regular la comida de un gato de un año", "qué tipo de croquetas son buenas para gatos de 1 a 2 años",
-                "comida seca o húmeda para gato de un año", "puedo combinar croquetas y sobre para mi gato joven", "cuántos sobres de comida húmeda puede comer un gato de un año",
-                "qué nutrientes necesita un gato en su primer año", "qué vitaminas necesita una gata joven", "mi gato ya creció qué croquetas le compro", "mi gata ya creció qué croquetas le compro", "mi gato ya es joven qué comida necesita",
-                "consejos de alimentación para gatos de 7 a 12 meses", "guía de nutrición para gatos de 1 a 2 años", "dieta adecuada para gatos en etapa juvenil",
-                "cómo saber si mi gato de un año está en su peso ideal", "qué comida ayuda a mantener el peso de un gato de 2 años", "alimento para gatos jóvenes activos",
-                "recomendación de croquetas para gatos de 1 año", "qué ingredientes buscar en comida para gatos de 1 a 2 años"
+                "qué alimento necesita un gato joven de 7 meses", "qué debe comer una gata de 8 meses", "alimentación para un gato joven de 9 meses", "qué comida le doy a un gato de 10 u 11 meses", "mi gata cumplió un año qué comida le compro", "mi gato tiene 1 año qué alimento seco le doy",
+                "cómo alimentar a una gata joven de 2 años", "qué come un gato de un año de edad", "dieta adecuada para un gato de año y medio", "qué comida necesita una gata joven de 2 años", "cuándo hacer el cambio de comida kitten a gato adulto", "a qué mes exacto se deja de dar alimento de cachorro",
+                "hasta qué mes le doy croquetas kitten a mi gata joven", "mi gata tiene 10 meses todavía necesita alimento kitten", "mi gata de 8 meses ya puede comer croquetas de adulto", "cómo hacer la transición gradual de comida de gatito a adulto",
+                "qué pasa si mi gato de un año sigue comiendo comida kitten", "puedo darle alimento de adulto a un gato de 9 meses", "qué croquetas darle a un gato joven recién castrado", "comida recomendada para gata joven esterilizada de un año", "mi gato de 8 meses fue castrado qué croquetas le doy",
+                "cómo evitar que mi gata de un año engorde tras la esterilización", "cuántas veces al día come un gato joven de un año", "porciones de croquetas para un gato de 1 a 2 años", "cuántos gramos de alimento seco come un gato de 2 años", "mi gato joven de un año pide comida todo el día",
+                "cómo regular el plato de croquetas en un gato de 2 años", "qué croquetas son ideales para gatos jóvenes de 1 a 2 años", "puedo combinar croquetas y sobre húmedo en mi gato de un año", "nutrientes clave para un gato en su etapa de juventud", "mi gata ya creció y tiene un año qué croquetas le convienen",
+                "guía de nutrición para gatos jóvenes de 7 a 24 meses", "dieta adecuada para la etapa juvenil felina", "cómo saber si mi gato de un año está en su peso ideal", "alimento balanceado para gatos jóvenes y activos", "recomendación de croquetas para felinos de 1 a 2 años",
+                "qué buscar en la comida de un gato que pasa a la adultez", "transición de dieta en gatos de 7 meses a 2 años", "comida húmeda recomendada para gatos jóvenes de un año", "cómo cuidar la energía de un gato de año y medio", "alimento para gatos jóvenes que salen a jugar",
+                "dieta para gatas jóvenes esterilizadas de 1 año", "cuánta proteína requiere un gato de 1 a 2 años", "cambio de croquetas de cachorro a adulto en gatos jóvenes", "nutrición equilibrada para felinos en su primer y segundo año", "consejos de alimentación para gatos de 7 a 12 meses",
+                "qué croquetas secas ayudan a los dientes de un gato de 1 año", "alimentación diaria para una gata joven en crecimiento final", "cuándo retirar la leche y dejar solo croqueta en gatos de 8 meses", "dieta de mantenimiento para felinos de 1 a 2 años"
             ],
             "responses": [
                 "De los 7 meses a los 12 meses, el gato ya tiene la mandíbula fuerte, por lo que la croqueta seca le ayuda a mantener los dientes limpios mediante el masticado, aun puede comer alimento para gatito y al cumplir el año (12 meses) es el momento de hacer el cambio definitivo a alimento de Gato Adulto"
@@ -139,23 +144,14 @@
         {
         "tag": "alimentacionGatoAdulto",
             "patterns": [
-                "qué debe comer un gato adulto","qué debe comer una gata adulta", "cómo alimentar a un gato adulto", "cómo alimentar a una gata adulta", "qué comida necesita un gato de 3 años", "qué comida necesita una gata de 3 años",
-                "qué debe comer un gato de 4 años", "qué alimento le doy a un gato de 5 años", "cómo alimentar a un gato de 6 años",
-                "alimentación para un gato de 3 años", "dieta balanceada para un gato de 4 años", "qué croquetas necesita un gato de 5 años",
-                "comida recomendada para un gato de 6 años", "qué alimento es bueno para un gato adulto", "cuántas veces al día debe comer un gato adulto",
-                "cuánta comida debe comer un gato adulto", "porción diaria de alimento para un gato adulto", "cuántos gramos de croquetas come un gato adulto",
-                "cómo calcular la porción de comida de un gato adulto", "horarios de comida para un gato adulto",
-                "es mejor alimentar a un gato adulto por horarios o a libre demanda","es mejor alimentar a una gata adulta por horarios o a libre demanda", "qué croquetas son adecuadas para un gato adulto", "qué croquetas son adecuadas para una gata adulta",
-                "cómo elegir un buen alimento adult para mi gato", "qué ingredientes buscar en comida para gatos adultos", "qué significa alimento para gatos adultos indoor",
-                "comida para gato adulto de interior", "comida para gato adulto esterilizado", "qué alimento ayuda a prevenir el sobrepeso en gatos adultos",
-                "cómo controlar el peso de un gato de 4 años", "mi gato adulto de 5 años está engordando qué comida le doy", "dieta ligera para gato adulto con sobrepeso",
-                "cómo mantener el peso ideal de un gato adulto", "es mejor comida seca o húmeda para un gato adulto", "puedo combinar croquetas y sobre para mi gata adulto",
-                "cuánta comida húmeda puede comer un gato adulto al día", "beneficios del alimento húmedo en gatos adultos", "cómo cuidar las vías urinarias de mi gato adulto con la comida",
-                "alimento para prevenir problemas urinarios en gatos adultos", "croquetas para bola de pelo en gatos adultos", "qué nutrientes esenciales necesita un gato adulto", "qué nutrientes esenciales necesita una gata adulta",
-                "cuánta proteína debe tener la comida de un gato adulto", "qué pasa si mi gato adulto come comida de gatito", "puedo darle croquetas kitten a un gato de 4 años",
-                "mi gato adulto pide comida a cada rato qué hago","mi gata adulta pide comida a cada rato qué hago", "mi gato de 3 años siempre tiene hambre", "cómo racionar la comida de un gato adulto", "consejos de alimentación para gatos de 3 a 6 años",
-                "guía de nutrición para un gato adulto", "recomendaciones de comida para gatos en edad adulta", "mejor dieta para un gato adulto casero", "qué tipo de comida le hace bien a un gato de 5 años","qué tipo de comida le hace bien a una gata de 5 años",
-                "alimentación diaria para un felino adulto", "rutina de comida para mi gato adulto"
+                "qué debe comer un gato adulto de 3 años", "qué alimento necesita una gata adulta de 4 años", "cómo alimentar a un gato adulto de 5 años", "qué comida le corresponde a un gato adulto de 6 años", "dieta balanceada para un gato en etapa adulta de 3 a 6 años", "cuántas veces al día debe comer un gato adulto sano", "porción diaria de alimento seco para un gato adulto",
+                "cuántos gramos de croquetas come una gata adulta de 4 años", "cómo calcular la ración de comida para un gato adulto de 5 años", "es mejor alimentar a un gato adulto por horarios o a libre demanda", "qué croquetas son recomendadas para gatos adultos de 3 a 6 años", "cómo elegir un buen alimento adult para mi gato de 4 años", "qué significa alimento para gatos adultos de interior u indoor",
+                "comida especial para gato adulto de 5 años esterilizado", "qué alimento previene el sobrepeso en gatos adultos de 4 años", "mi gato adulto de 5 años está subiendo de peso qué le doy", "dieta light o de control de peso para gato adulto", "cómo mantener la condición corporal ideal en un gato adulto", "es mejor combinar croquetas y sobre húmedo en gatos adultos",
+                "beneficios del alimento húmedo para las vías urinarias en adultos", "cómo cuidar los riñones y vejiga de mi gato adulto de 4 años con la comida", "alimento para prevenir cálculos u obstrucción urinaria en gatos adultos", "croquetas para control de bolas de pelo en gatos adultos", "qué nutrientes esenciales requiere una gata adulta de 3 a 6 años", "cuánta proteína debe tener el concentrado de un gato adulto",
+                "qué pasa si mi gato adulto de 4 años come comida de gatito por error", "mi gata adulta de 5 años siempre tiene hambre cómo racionar", "consejos de nutrición para felinos adultos en plenitud", "guía de comida diaria para gatos en edad adulta de 3 a 6 años", "cuál es la mejor comida comercial para un gato adulto de 4 años", "dieta de mantenimiento para gatos adultos de casa",
+                "rutina alimenticia para una gata adulta sana de 3 años", "alimento seco formulado para adultos de 3 a 6 años", "por qué la comida húmeda previene problemas urinarios en adultos", "cómo regular las calorías de un gato adulto poco activo", "alimento para gatos adultos que viven en departamento", "qué marcas ofrecen buen balance para gatos adultos de 5 años", "cuántos sobres de comida húmeda puede comer un gato adulto al día",
+                "dieta preventiva para vías urinarias en gatos de 3 a 6 años", "cómo racionar las croquetas de un gato adulto castrado", "alimento con control de PH urinario para gatos adultos", "frecuencia de alimentación recomendada para gatos de 4 años", "nutrición felina para la etapa de madurez activa de 3 a 6 años", "qué alimento seco evita la formación de sarro en gatos adultos",
+                "por qué un gato adulto no debe comer alimento alto en grasa", "croquetas adultas de fácil digestión para gatos de 5 años", "cómo alimentar a una gata adulta con digestión sensible", "dieta equilibrada para gatos adultos de 3, 4, 5 y 6 años", "alimento para gatos adultos de vida sedentaria", "orientación de comida para felinos adultos de 3 a 6 años"
             ],
             "responses": [
                 "En la etapa de gato adulto de 3 a 6 años \n El gato ya alcanzó su madurez física completa, sus hábitos están consolidados y su metabolismo se encuentra en modo de mantenimiento, un gato normal necesitará suficiente alimento como energía gaste para realizar sus actividades diarias. En este rango de edad el gato ya puede consumir croquetas secas para gato adulto y comida húmeda, no la veas como un lujo, sino como medicina preventiva barata. Los gatos adultos de 3 a 6 años son propensos a desarrollar problemas en las vías urinarias (pueden llegar a taparse al orinar. Incluir comida humeda en su dieta puede ayudar bastante"
@@ -165,24 +161,15 @@
         {
         "tag": "alimentacionGatoMayor",
             "patterns": [
-                "qué debe comer un gato de 7 años", "qué debe comer una gata de 7 años", "cómo alimentar a un gato de 7 años","cómo alimentar a una gata de 7 años",
-                "qué comida le doy a un gato de 8 años", "cómo alimentar a un gato de 8 años","cómo alimentar a una gata de 8 años",
-                "qué alimento necesita un gato de 9 años", "qué debe comer un gato de 10 años","qué debe comer una gata de 10 años",
-                "cómo alimentar a un gato de 10 años", "alimentación para un gato de 7 años", "alimentación para una gata de 7 años",
-                "dieta para un gato de 8 años", "qué comida necesita un gato de 9 años", "nutrición para un gato de 10 años", "nutrición para una gata de 10 años",
-                "qué debe comer un gato maduro", "cómo alimentar a un gato adulto mayor", "qué comida es adecuada para un gato maduro", "mi gata tiene 7 años debo cambiarle el alimento",
-                "qué alimento necesita un gato de más de 7 años", "mi gato cumplió 7 años qué comida le compro", "mi gato tiene 7 años debo cambiarle el alimento",
-                "a qué edad se cambia a comida senior en gatos", "cuándo empezar a dar alimento senior a un gato", "mi gato tiene 8 años todavía puede comer comida de adulto",
-                "puedo darle alimento normal a un gato de 9 años", "cómo hacer el cambio a croquetas senior 7+", "qué significa alimento para gatos 7+",
-                "qué croquetas recomiendan para gatos de 7 a 10 años", "qué buscar en un alimento para gatos mayores de 7 años", "qué ingredientes necesita la comida de un gato maduro",
-                "cuánta proteína debe comer un gato de 8 años", "por qué el alimento senior tiene menos fósforo", "comida para cuidar los riñones de un gato de 8 años", "comida para cuidar los riñones de una gata de 8 años",
-                "qué alimento ayuda a los riñones de un gato maduro", "croquetas con condroprotectores para gatos de 7 años", "alimento para articulaciones en gatos mayores",
-                "cuántas veces al día debe comer un gato de 8 años", "cuánta comida debe comer un gato de 9 años", "porciones de croquetas para gato de 7 a 10 años", "porciones de croquetas para gata de 7 a 10 años",
-                "cómo controlar las porciones de un gato maduro", "mi gato de 8 años duerme mucho qué comida le conviene", "alimento para gato maduro poco activo",
-                "comida para gato esterilizado de más de 7 años", "es mejor comida húmeda para un gato de 8 años","es mejor comida húmeda para una gata de 8 años", "cuántos sobres de comida húmeda darle a un gato de 9 años",
-                "beneficios de la comida húmeda en gatos de 7 a 10 años", "cómo hidratar a un gato mayor con su comida", "puedo mezclar croquetas senior con caldo o sobres",
-                "qué vitaminas necesita un gato de 8 años en su dieta", "consejos de alimentación para gatos de 7 a 10 años", "guía de nutrición para gatos en etapa madura",
-                "dieta balanceada para un felino de 9 años", "recomendaciones de comida para gato de 10 años", "qué alimento le hace bien a un gato que está entrando a la vejez"
+                "qué debe comer un gato maduro de 7 años", "cómo alimentar a una gata de 8 años", "qué alimento necesita un gato maduro de 9 años", "qué comida le doy a un gato de 10 años", "alimentación recomendada para gatos maduros de 7 a 10 años", "dieta para un gato que está entrando a los 7 años", "mi gata cumplió 7 años debo cambiarle el alimento a senior",
+                "a qué edad exacta se cambia a croquetas formuladas como 7+", "qué significa alimento para gatos maduros o senior 7+", "por qué el alimento para gatos de 7 a 10 años tiene menos fósforo", "cómo cuidar los riñones de mi gato de 8 años a través de la comida", "qué croquetas previenen el desgaste renal en gatos maduros de 7+",
+                "es mejor la dieta 50/50 de croquetas y sobres en gatos de 8 años", "por qué dar la mitad de calorías en comida húmeda a un gato de 7 a 10 años", "croquetas con suplementos para articulaciones en gatos de 8 años", "alimento para cuidar la movilidad en gatos maduros de 9 años", "cuántas veces al día debe comer un gato de 7 a 10 años",
+                "porciones de croquetas para gatos maduros poco activos", "mi gato de 8 años duerme más tiempo qué alimento le conviene", "comida para gata esterilizada de más de 7 años", "por qué incrementar los sobres de comida húmeda en gatos de 8 años", "cómo mantener hidratado a un gato maduro de 9 años con su alimento", "puedo mezclar croquetas senior 7+ con caldo o sobres de supermercado",
+                "qué vitaminas y antioxidantes necesita un gato de 8 años en su dieta", "guía de nutrición para felinos en etapa madura de 7 a 10 años", "dieta balanceada para un gato que entra a la vejez inicial", "qué alimento protege la función renal de un gato de 9 años", "cómo adaptar la comida para una gata de 7 años esterilizada", "alimento senior 7+ seco y húmedo para felinos maduros",
+                "por qué reducir el fósforo en la comida de gatos de 7 a 10 años", "croquetas de fácil masticación para gatos de 8 años", "cómo evitar la pérdida de peso en un gato maduro de 9 años", "dieta preventiva de salud renal para gatos de 7, 8, 9 y 10 años", "qué ingredientes buscar en una bolsa de croquetas 7+", "por qué los sobres económicos ayudan a hidratar gatos de 8 años",
+                "alimento para gatos maduros con metabolismo lento", "nutrición felina para la etapa de transición a la vejez (7 a 10 años)", "cómo racionar la comida a una gata madura de 8 años", "beneficios del alimento húmedo diario en gatos de 7 a 10 años", "qué croquetas cuidan la salud urinaria y renal en gatos de 9 años", "dieta 50 por ciento húmeda y 50 por ciento seca para gatos de 7+",
+                "alimentación para gatos maduros de 7 a 10 años de edad", "cuánta proteína de alta calidad necesita un gato de 8 años", "cómo prevenir la insuficiencia renal con comida en gatos de 7+", "alimento para gatos maduros de interior", "consejos de alimentación para gatas de 7, 8, 9 y 10 años", "qué cambios de comida hacer cuando un gato cumple 7 años", "alimento seco y húmedo recomendado para la etapa 7+",
+                "cuidados nutricionales para felinos en edad madura", "guía de alimentación para gatos entre los 7 y 10 años"
             ],
             "responses": [
                 "Un gato de 7 a 10 años pasa por una época de la vida en la que cambian las necesidades nutricionales, ya sea por problemas médicos o simplemente por envejecimiento. \n En lugar de comprar latas caras, incrementa el uso de sobres económicos de supermercado. Una excelente opción es pasar a una dieta 50/50: darle la mitad de sus calorías diarias en croquetas secas y la otra mitad en comida húmeda. "
@@ -207,8 +194,9 @@
                 "qué nutrientes necesita un gato de más de 12 años", "cuánta proteína digestible necesita un gato super senior", "comida baja en fósforo para gato anciano de 11 años",
                 "qué alimento cuida los riñones en gatos de más de 12 años", "suplementos o vitaminas para mezclar en la comida de un gato anciano", "cuántas veces al día debe comer un gato de 14 años",
                 "porciones de comida para gatos geriátricos", "es bueno darle caldos caseros sin sal a un gato viejito", "cómo hidratar a un gato anciano a través del alimento",
-                "qué tipo de comida apoya la función cerebral en gatos viejos", "dieta para gato anciano con poco movimiento", "consejos de alimentación para felinos de más de 11 años",
-                "cuál es la comida ideal para la última etapa de vida de un gato", "qué comida darle a una gata muy viejita para consentirlo sanamente"
+                "qué tipo de comida apoya la función cerebral en gatos viejos", "dieta para gato anciano con poco movimiento", "dieta especial para gatos súper senior de 11 a 16 años",
+                "cómo alimentar a un gato viejito con pérdida de piezas dentales", "alimento palatable y tibio para felinos geriátricos", "nutrición adaptada para la longevidad en gatos de 11 años en adelante",
+                "guía completa de alimentación para gatos ancianos y viejitos"
             ],
             "responses": [
                 "De los 11 años en adelante las croquetas secas y duras de toda la vida se vuelven difíciles de comer, muchos gatos sénior sufren de dolor en los dientes, encías inflamadas o pérdida de piezas dentales, por lo que empezarán a rechazar el alimento seco simplemente porque les duele masticarlo, pueden comer mayormente sobres de comida humeda, croquetas secas de adulto mezcladas con agua tibia, y es super importante mantenerlos hidratados"
@@ -218,19 +206,16 @@
         {
         "tag": "alimentacionProhibida",
             "patterns": [
-                "qué alimentos son prohibidos para gatos", "comida peligrosa para gatos", "alimentos tóxicos para gatos", "qué cosas no puede comer mi gato",
-                "qué comida le hace daño a un gato", "qué alimentos son venenosos para los gatos", "lista de alimentos prohibidos para gatos",
-                "comidas que debo evitar darle a mi gato", "qué no puede comer un gato", "qué alimentos hacen daño a los gatos", "qué comida es mala para mi gato",
-                "qué alimentos son peligrosos para un gato", "hay comidas que sean venenosas para gatos", "puedo darle chocolate a mi gato",
-                "el chocolate es malo para los gatos", "por qué el chocolate es tóxico para gatos", "mi gato puede comer chocolate blanco", "los gatos pueden comer cebolla",
-                "el ajo es tóxico para los gatos", "los gatos pueden comer puerro", "qué pasa si un gato come ajo o cebolla", "puede mi gato comer uvas", "las pasas son malas para los gatos",
-                "los gatos pueden comer aguacate", "el aguacate es peligroso para los felinos", "puedo darle café a mi gato", "qué pasa si mi gato toma cafeína",
-                "puedo darle té o café a mi mascota", "los gatos pueden tomar alcohol", "el alcohol es malo para los gatos", "los gatos pueden comer dulces o azúcar",
-                "el xilitol es tóxico para los gatos", "puedo darle comida con edulcorante a mi gato", "los gatos pueden comer masa cruda de pan", "la levadura es peligrosa para los gatos",
-                "puedo darle huesos cocidos a mi gato", "los huesos de pollo son peligrosos para gatos", "qué frutas son tóxicas para los gatos", "qué frutas no puede comer un gato",
-                "qué verduras no puede comer mi gato", "qué verduras son peligrosas para felinos", "qué alimentos humanos debo evitar con mi gato", "hay alimentos humanos venenosos para gatos",
-                "comida de personas que no debe comer un gato", "qué condimentos son dañinos para gatos", "la sal o la comida con condimentos es mala para gatos", "puedo darle sobras de comida humana a mi gato",
-                "qué cosas no debo darle nunca de comer a mi gato", "puedo darle leche de vaca a un gato", "por qué la leche le hace daño a los gatos"
+                "qué alimentos son prohibidos para gatos y gatas", "lista de alimentos tóxicos y peligrosos para gatos", "qué comidas son venenosas para mi gato", "qué alimentos le hacen daño a una gata", "alimentos de personas que nunca debo darle a mi gato",
+                "comida humana tóxica para los felinos", "cuáles son las comidas peligrosas para mi gata", "qué cosas no puede comer un gato por riesgo de intoxicación", "alimentos prohibidos que causan envenenamiento en gatos",
+                "por qué el chocolate es tóxico y peligroso para los gatos", "es mortal darle chocolate blanco o negro a mi gata", "por qué la cebolla y el ajo son veneno para los gatos", "qué pasa si mi gata come cebollín o puerro", "es peligrosa la intoxicación por ajo y cebolla en gatos",
+                "por qué las uvas y las pasas causan fallo renal en gatos", "es peligroso darle uvas o pasas a mi gato", "por qué el aguacate o palta es tóxico para las gatas", "el aguacate le hace daño al estómago de mi gato", "por qué el café y la cafeína son peligrosos para gatos",
+                "el alcohol es veneno para los gatos y gatas", "qué tan grave es que un gato tome alcohol o cerveza", "por qué el xilitol y los edulcorantes son tóxicos en gatos", "es malo darle dulces o golosinas humanas a mi gata", "por qué la masa cruda con levadura es peligrosa para un gato",
+                "los huesos cocidos de pollo son peligrosos para mi gato", "por qué no se deben dar huesos de pollo o espinas a las gatas", "qué frutas son tóxicas y prohibidas para los gatos", "qué verduras no puede comer mi gata por ser dañinas", "qué condimentos y sal son peligrosos para la salud del gato",
+                "la comida condimentada es mala para mi gata", "por qué la leche de vaca le hace daño y causa diarrea al gato", "la leche entera es mala para el digestivo de los gatos", "es peligroso darle carne o pescado crudo a mi gato", "por qué la carne cruda puede transmitir parásitos a la gata", "las nueces de macadamia son tóxicas para los gatos",
+                "el agua de coco es mala para los gatos", "qué cítricos como limón o naranja son dañinos para gatos", "es malo darle sobras de comida condimentada a mi gata", "qué alimentos causan anemia en los gatos", "alimentos que provocan falla hepática o renal en gatas", "qué ingrediente de cocina es peligroso para mi gato",
+                "cómo saber si un alimento es veneno para mi gata", "guía de intoxicaciones alimentarias en gatos", "qué comida debo evitar darle a mi michi", "cuáles son los venenos alimenticios más comunes en gatos", "alimentos prohibidos en la dieta felina", "qué comida de consumo humano enferma a los gatos",
+                "por qué los embutidos con sal son malos para las gatas", "alimentos prohibidos para gatos bebés y adultos", "advertencias sobre comida peligrosa para felinos"
             ],
             "responses": [
                 "Nunca le des a tu gato: \n alcohol, cualquier producto que contenga xilitol, aguacate, cebollines, chocolate, agua de coco, café, ajo, uvas, nueces de macadamia, olvidate de darle cebolla y cualquier cítrico, tampoco intentes darle de comer carne cruda o huesos de pollo"
@@ -239,41 +224,18 @@
         {
         "tag": "alimentacionRaraPeroSegura",
             "patterns": [
-                "qué frutas puede comer mi gato", "qué frutas puede comer mi gata","qué verduras puede comer un gato", "qué verduras puede comer una gata", "qué alimentos humanos puede comer mi gato de premio", "los gatos pueden comer sandía",
-                "le puedo dar sandía a mi gato", "los gatos pueden comer melón", "puedo darle melón a mi gato", "puedo darle melón a mi gata", "los gatos pueden comer arándanos", "es bueno darle arándanos a un gato",
-                "los gatos pueden comer plátano", "puedo darle banano a mi gato", "los gatos pueden comer fresas", "los gatos pueden comer manzana", "le puedo dar trocitos de manzana sin semillas a mi gato",
-                "los gatos pueden comer calabaza", "el ayote cocido es bueno para los gatos", "puedo darle zapallo a mi gato", "los gatos pueden comer brócoli", "puedo darle brócoli hervido a mi gato",
-                "los gatos pueden comer pepino", "es seguro darle pepino a un gato", "los gatos pueden comer zanahoria", "puedo darle zanahoria cocida a mi gato", "los gatos pueden comer avena",
-                "le puedo preparar avena cocida a mi gato", "los gatos pueden comer chile verde no picante", "es seguro el pimiento verde dulce para los gatos", "los gatos pueden comer tomate maduro",
-                "el tomate rojo le hace daño a los gatos", "los gatos pueden comer lechuga", "los gatos pueden comer espinacas", "qué comida casera saludable le puedo dar a mi gato", "qué premios naturales le puedo dar a mi gato",
-                "frutas seguras para gatos", "verduras seguras para gatos", "lista de frutas y verduras que puede comer un gato", "qué vegetales puede digerir un gato", "qué alimentos de consumo humano no le hacen daño a un gato",
-                "puedo compartir mi comida con mi gato si es fruta", "qué snacks caseros son buenos para gatos", "los gatos pueden comer huevo cocido", "puedo darle huevo revuelto sin sal a mi gato", "los gatos pueden comer pollo hervido sin condimentos",
-                "puedo darle caldo de pollo sin sal a mi gato", "los gatos pueden comer arroz cocido", "puedo darle un poco de calabacín a mi gato", "qué frutas ayudan a hidratar a los gatos", "bocadillos saludables y seguros para gatos",
-                "alimentos no comunes que un gato puede comer", "qué comidas no tóxicas puedo darle de premio a mi gato"
+                "qué frutas son seguras y permitidas para mi gato", "qué verduras son inofensivas y aptas para mi gata", "alimentos humanos seguros para dar de premio a un gato", "qué comida casera no tóxica puedo darle a mi gata", "es seguro darle sandía o melón de premio a mi gato", "puedo darle trocitos de sandía fresca a mi gata",
+                "el melón es una fruta permitida e hidratante para gatos", "es bueno darle arándanos como snack a mi gato", "los arándanos son seguros y ricos en antioxidantes para gatas", "puedo darle un poco de plátano o banano de premio a mi gato", "el banano es inofensivo para la dieta de una gata", "es seguro darle trozos de manzana sin semillas a mi gato",
+                "las fresas son una fruta permitida para los gatos", "el ayote o calabaza cocida es segura y buena para mi gata", "para qué sirve la calabaza hervida en la digestión del gato", "puedo darle zapallo o calabacín cocido a mi gata", "es seguro darle brócoli al vapor como premio a mi gato", "el brócoli hervido es apto e inofensivo para gatas",
+                "puedo darle trocitos de pepino fresco a mi gata", "el pepino es una verdura permitida para hidratar al gato", "la zanahoria cocida es segura para dar de snack a un gato", "puedo preparar avena cocida solo en agua para mi gata", "la avena en agua es apta para el estómago de los gatos", "el chile verde dulce o pimiento morrón es seguro para gatos",
+                "es inofensivo darle tomate rojo bien maduro a mi gata", "la lechuga y espinaca cocida son permitidas para gatos", "qué vegetal verde es inofensivo si mi gato lo prueba", "qué frutas hidratantes son permitidas en verano para gatas", "premios naturales caseros y seguros para mi gato", "bocadillos vegetales no tóxicos para felinos",
+                "puedo darle un pedacito de huevo cocido sin sal a mi gata", "el huevo revuelto bien cocido es seguro para los gatos", "el pollo hervido sin sal es una comida casera apta para gatos", "puedo darle caldo de pollo casero sin condimentos a mi gata", "el arroz blanco cocido es inofensivo para un gato", "qué snacks caseros saludables no le hacen daño a mi gata",
+                "lista de frutas e ingredientes permitidos para gatos", "qué vegetales de cocina son aptos como golosina felina", "alimentos no comunes que son seguros para la dieta del gato", "puedo compartir frutas permitidas con mi gata", "qué alimentos humanos son inofensivos de premio para gatos", "frutas y verduras comestibles que no dañan a mi gato",
+                "bocadillos seguros de origen vegetal para felinos", "qué premios caseros no tóxicos le gustan a las gatas", "alimentos extra seguros para consentir a mi gato", "guía de snacks y frutas permitidas para gatos y gatas", "alimentos inofensivos fuera del concentrado para gatos", "qué verdura cocida le puedo dar de probar a mi gata",
+                "opciones de premios naturales e inofensivos para felinos", "alimentos caseros aptos para la salud de mi gato"
             ],
             "responses": [
                 "Entre estas opciones inusuales pero inofensivas, se encuentran frutas hidratantes y antioxidantes como la sandía, el melón, los arándanos y el plátano, vegetales cocidos de fácil digestión como brócoli, ayote, zanahoria, elote, tomate rojo maduro y chile verde dulce (pimiento morrón), así como la avena preparada exclusivamente con agua. \n Pero claro depende del gusto de tu gato :)"
-            ]
-        },
-        {
-        "tag": "tomarEnCuentaAlComprarCroquetas",
-            "patterns": [
-                "qué debo tomar en cuenta al comprar croquetas para mi gato", "cómo saber si un concentrado para gatos es de buena calidad", "cómo elegir las mejores galletas para mi gato",
-                "qué revisar al comprar semillas para gato", "cómo elegir un buen alimento seco para mi gato", "en qué fijarme al comprar croquetas de gato", "cómo leer la etiqueta de la comida de mi gato",
-                "qué ingredientes debe tener un buen concentrado para gatos", "qué ingredientes debo evitar en las croquetas de mi gato", "cuál debe ser el primer ingrediente en el concentrado de gato",
-                "cómo saber si el pienso para gatos es de calidad", "qué porcentaje de proteína deben tener las croquetas de gato", "cuánta grasa debe tener el concentrado para gatos", "la comida de gato debe tener taurina",
-                "por qué es importante la taurina en el concentrado felino", "cómo saber si unas galletas para gato son buenas", "qué diferencia hay entre alimento comercial y alimento premium para gatos",
-                "vale la pena comprar concentrado super premium para gatos", "cómo distinguir croquetas de baja calidad de las de buena calidad", "son malas las croquetas de supermercado para gatos", "qué concentrado es mejor para gatos caseros",
-                "qué semillas para gato me recomiendan comprar", "qué buscar en la bolsa de comida de mi gato", "consejos para comprar el mejor alimento seco para gatos", "guía para elegir croquetas de gato",
-                "cómo saber si las galletas de mi gato tienen demasiados carbohidratos", "los gatos necesitan concentrado sin granos", "es mejor comprar croquetas grain free para gatos", "qué significa subproductos de ave en la comida de gatos",
-                "son malos los subproductos en el concentrado para gatos", "es malo el maíz o el trigo en las croquetas de gato", "qué colorantes o conservadores debo evitar en el pienso de gato", "cómo elegir concentrado según la edad de mi gato",
-                "debo fijarme si mi gato está esterilizado al comprar croquetas", "cómo saber si un concentrado cuida las vías urinarias", "qué semillas comprar para un gato de interior", "qué características tiene una buena comida seca para felinos",
-                "cómo saber si las croquetas que le doy a mi gato son saludables", "qué nutrientes esenciales debe tener el concentrado felino", "cómo saber qué marca de croquetas le conviene a mi gato", "en qué empaque o presentación comprar el alimento seco de gato",
-                "cómo comparar dos marcas de concentrado para gatos", "qué certificaciones o sellos de calidad buscar en la comida de gato", "por qué el primer ingrediente debe ser carne real en las croquetas", "qué comida seca es más digestible para los gatos", "cómo saber si el alimento seco tiene suficiente carne",
-                "tips para escoger buenas galletas nutritivas para gatos", "qué concentrado comprar si tengo presupuesto ajustado", "cómo encontrar un buen equilibrio precio calidad en croquetas de gato", "recomendaciones para elegir la comida seca adecuada para mi gato"
-            ],
-            "responses": [
-                "Al elegir el alimento, la clave está en los detalles visuales y en las etiquetas. \n Evita las croquetas que se vean completamente opacas, secas o que parezcan tiza o cartón; deben de tener un aspecto ligeramente brillante o dejar un rastro mínimo de aceite en tus dedos al tocarlo, lo que indica que tiene las grasas añadidas necesarias para ser apetecible. Por otro lado, al mirar la etiqueta trasera de un sobre de comida húmeda, verás un apartado que dice Humedad: Max 80% o 82%.\n Cuanto más alto sea este número en los sobres económicos, mejor, porque significa que estás logrando el objetivo principal: meterle agua a sus riñones sin que el gato se dé cuenta"
             ]
         },        
         {
@@ -302,18 +264,16 @@
         {
         "tag": "trucosDarDesparasitanteGato",
             "patterns": [
-                "hay algún truco para darle el desparasitante a mi gato", "cómo darle el desparasitante a un gato sin pelear", "cómo engañar a mi gato para que se tome el desparasitante",
-                "mi gato no se toma la pastilla desparasitante qué hago", "cómo darle una pastilla a un gato agresivo", "cómo darle una pastilla a un gato difícil", "mi gato escupe la pastilla desparasitante",
-                "cómo hacer que mi gato se trague la pastilla sin que se dé cuenta", "trucos para darle medicina a un gato", "técnicas para dar pastillas a gatos", "cómo esconder la pastilla desparasitante en la comida",
-                "con qué comida puedo camuflar una pastilla para gato", "puedo moler o triturar la pastilla desparasitante", "se puede disolver la pastilla de desparasitar en agua", "puedo mezclar el desparasitante con churu o comida húmeda",
-                "cómo envolver a un gato en una toalla para darle medicina", "qué es la técnica del burrito para gatos", "cómo sujetar a un gato para darle una pastilla", "sirve un aplicador o lanzador de pastillas para gatos", "cómo usar un pastillero de jeringa para gatos",
-                "cómo abrirle la boca a un gato para meterle una pastilla", "dónde colocar la pastilla en la boca del gato para que la trague", "cómo hacer que un gato pase la saliva con la pastilla", "truco de frotar la garganta del gato para que trague",
-                "cómo darle desparasitante líquido con jeringa sin que lo escupa", "por dónde meter la jeringa en la boca de un gato", "cómo evitar que mi gato babee o eche espuma con el desparasitante", "mi gato se esconde cuando ve la caja del desparasitante",
-                "cómo medicar a un gato sin estresarlo tanto", "tips para darle medicamentos orales a gatos rebeldes", "cómo darle desparasitante a un gato que muerde", "qué snacks sirven para esconder pastillas en gatos", "existen premios para meter pastillas de gatos",
-                "puedo untar la pastilla con mantequilla para que resbale", "es bueno untar la pasta desparasitante en la pata del gato", "truco de poner medicina en la pata para que se lama", "cómo hacer para que no me arañe al desparasitarlo", "ayuda no puedo darle el desparasitante a mi gato",
-                "mi gato detecta la pastilla en la comida y la deja", "cómo camuflar el olor del desparasitante en gatos", "qué hacer si mi gato rechaza el desparasitante", "consejos para desparasitar a un gato arisco", "cómo darle pastillas a un felino sin sufrir en el intento", "manera fácil de darle desparasitante a un gato",
-                "cuál es el mejor método casero para darle medicina a un gato", "cómo sujetar la cabeza del gato para meter la pastilla", "truco de darle un premio antes y después de la pastilla", "cómo acostumbrar a un gato a tomar medicamento oral", "qué truco recomiendan para gatos que no se dejan medicar",
-                "cómo darle desparasitante rápido y seguro a mi gato" 
+                "hay algún truco para darle el desparasitante a mi gato", "cómo darle la pastilla desparasitante a un gato sin pelear", "cómo engañar a mi gato para que se tome el desparasitante", "mi gato no se quiere tomar la pastilla desparasitante qué hago", "cómo darle una pastilla a un gato agresivo o arisco",
+                "cómo darle un medicamento a una gata difícil que se resiste", "mi gato escupe la pastilla desparasitante una y otra vez", "cómo hacer que mi gata se trague la pastilla sin darse cuenta", "trucos caseros para darle medicinas orales a los gatos", "técnicas de manejo para dar pastillas a gatas rebeldes",
+                "cómo esconder la pastilla desparasitante en la comida del gato", "con qué snack o premio puedo camuflar una pastilla para gata", "puedo moler o triturar la pastilla desparasitante en la comida", "se puede disolver la pastilla de desparasitar en agua o caldo", "puedo mezclar el desparasitante con churu paté o comida húmeda",
+                "cómo envolver a un gato en una toalla para darle medicina", "qué es y cómo se hace la técnica del burrito en gatos", "cómo sujetar a una gata firmemente para meterle una pastilla", "sirve un aplicador o lanzador plástico de pastillas para gatos", "cómo usar una jeringa pastillera para medicar a un gato",
+                "cómo abrirle la boca a un gato sin que me muerda al medicarlo", "dónde colocar la pastilla en la lengua del gato para que la trague", "cómo hacer que una gata pase la saliva con la medicina adentro", "truco de frotar la garganta o el cuello del gato para que trague", "cómo darle desparasitante líquido con jeringa sin que lo escupa",
+                "por qué comisura de los labios meter la jeringa de jarabe al gato", "cómo evitar que mi gata babee o eche espuma con el desparasitante", "es normal que mi gato bote baba blanca al probar la pastilla", "mi gato se esconde cuando ve la caja o la jeringa del desparasitante", "cómo medicar a una gata asustadiza sin estresarla tanto",
+                "tips para administrar remedios orales a gatos que arañan", "cómo darle el desparasitante a un gato que muerde o tira zarpazos", "qué snacks cremosos sirven para esconder pastillas en gatos", "existen premios vacíos especiales para esconder pastillas felinas", "puedo untar la pastilla con un poco de mantequilla o malta",
+                "es bueno untar la pasta desparasitante en la pata de la gata", "truco de poner la medicina en el lomo de la pata para que se lama", "cómo hacer para que mi gata no me arañe al desparasitarla", "ayuda mi gato no deja que le meta el desparasitante en la boca", "mi gata detecta la pastilla en la comida y la deja limpia",
+                "cómo camuflar el olor amargo del desparasitante en la comida", "qué hacer si mi gato rechaza totalmente el desparasitante", "consejos para desparasitar a una gata callejera o arisca", "cómo darle pastillas a un felino de forma rápida y sin sufrir", "cuál es el mejor método casero para administrar medicina a un gato",
+                "cómo sujetar la cabeza de la gata para introducir la tableta", "truco del sándwich de premios para dar pastillas a un gato", "cómo acostumbrar a mi gata a recibir remedios por la boca", "qué truco veterinario recomiendan para gatos que no se dejan medicar", "pasos para darle el desparasitante oral de forma segura a mi gato"
             ],
              "responses": [
                 "¡Darle una pastilla a un gato puede ser toda una odisea! Aquí tienes los mejores trucos que suelen funcionar:\\n\\n1 El camuflaje perfecto: Esconde la pastilla entera dentro de una bolita pequeña de comida irresistible (como snack cremoso tipo Churu, paté denso, malta o un pedacito de carne cocida). Dáselo cuando tenga hambre.\\n2 Técnica del sándwich: Dale primero un bocado pequeño sin nada. Cuando lo coma con confianza, dale el bocado con la pastilla y de inmediato un tercer bocado limpio para que trague rápido.\\n3 El burrito con toalla: Si tu gato saca las garras, envuélvelo suavemente pero firme en una toalla grande dejando solo su cabeza libre. Esto evita arañazos y lo mantiene contenido sin lastimarlo.\\n4 Colocación rápida y garganta: Si debes dársela directa, sujeta su cabeza desde arriba inclinándola ligeramente hacia atrás, abre la mandíbula inferior, deposita la pastilla al fondo de la lengua (cerca de la garganta), cierra su boca y acaricia su cuello hacia abajo suavemente para estimular el reflejo de deglución.\\n¡Tranqui, casi ningún gato coopera a la primera con las medicinas! Prueba estos métodos:\\n Snack de pata: Si el desparasitante viene en pasta o gel palatable, úntale una pequeña cantidad en el dorso de una pata delantera. Por puro instinto de limpieza, el gato se lamerá de inmediato para retirarlo.\\n Líquido con jeringa: Si es jarabe, no apuntes de frente a la garganta para evitar que se atragante; introduce la punta de la jeringa por la comisura lateral de los labios (detrás de los colmillos) y administra el líquido despacito, dejando que trague por partes.\\n ¿Triturar la pastilla?: Algunas pastillas desparasitantes son extremadamente amargas al romperlas y harán que tu gato comience a salivar espuma blanca o rechace su plato de comida por días."
@@ -344,20 +304,15 @@
         {
         "tag": "desparasitacion",
             "patterns": [
-                "en qué formatos vienen los desparasitantes para gatos", "qué presentaciones de desparasitante hay para gatos", "cómo vienen los desparasitantes felinos",
-                "cuáles son los tipos de desparasitantes para gatos", "qué opciones hay para desparasitar a un gato", "cómo se aplica el desparasitante a un gato",
-                "cómo se administra un desparasitante felino", "hay desparasitantes en pipeta para gatos", "sirven las pipetas para desparasitar gatos por dentro",
-                "qué desparasitante en pipeta sirve para lombrices", "las pipetas desparasitantes sirven para parásitos internos y externos", "cómo funciona la pipeta desparasitante para gatos",
-                "dónde se coloca la pipeta desparasitante a un gato", "cómo poner una pipeta a mi gato sin que se la lama", "hay desparasitantes en pastilla para gatos", "cómo darle una pastilla desparasitante a mi gato",
-                "mi gato no se traga la pastilla de desparasitar qué hago", "puedo machacar la pastilla desparasitante en la comida de mi gato", "existen pastillas desparasitantes con sabor a carne para gatos",
-                "hay pastillas palatables para desparasitar gatos", "vienen desparasitantes en jarabe o pasta para gatos", "cómo darle desparasitante líquido a un gato", "cómo dar desparasitante en jeringa a un gato",
-                "cuál es el mejor formato de desparasitante para un gatito bebé", "qué desparasitante es más fácil de darle a un gato difícil", "cómo desparasitar a un gato que no se deja agarrar",
-                "cuál es la forma más fácil de desparasitar a un gato", "qué desparasitante no requiere darle pastillas a la fuerza", "existen inyecciones para desparasitar gatos", "se puede desparasitar a un gato con inyección en el veterinario",
-                "sirven los collares para desparasitar gatos", "los collares antiparasitarios sirven contra lombrices o solo pulgas", "qué diferencia hay entre pipeta, pastilla y jarabe para desparasitar",
-                "cuál es la diferencia entre desparasitación interna y externa", "qué desparasitante cubre parásitos internos y externos a la vez", "qué es un desparasitante de amplio espectro para gatos", "qué presentaciones existen de desparasitante interno para gatos",
-                "qué formatos hay para desparasitación externa en gatos", "spray antiparasitario para gatos cómo se usa", "sirven los talcos antiparasitarios en gatos", "por qué no se recomienda usar talco o shampoo antiparasitario en gatos", "puedo usar desparasitante de perro en mi gato",
-                "por qué las pipetas de perro son tóxicas para los gatos", "el desparasitante de gatos se vende con receta o libre", "cómo saber qué formato de desparasitante comprar para mi gato", "qué formato de desparasitante causa menos vómito o baba",
-                "es normal que mi gato bote saliva si le doy desparasitante líquido", "consejos para aplicar desparasitante a un gato nervioso", "guía de presentaciones de desparasitantes para gatos", "qué productos y marcas vienen en pipeta o tableta para gatos"
+                "en qué formatos vienen los desparasitantes para gatos y gatas", "qué presentaciones de desparasitante existen para gatos", "cuáles son los tipos de desparasitantes felinos que venden", "qué opciones de desparasitante interno y externo existen", "cómo funcionan las pipetas desparasitantes en gatos",
+                "sirven las pipetas spot-on para desparasitar gatos por dentro", "qué desparasitante en pipeta sirve para eliminar lombrices", "las pipetas antiparasitarias cubren parásitos internos y externos", "dónde se coloca la pipeta desparasitante en el cuerpo de una gata", "cómo actúa el líquido de la pipeta en la piel del gato",
+                "qué presentaciones de desparasitante en pastilla hay para gatos", "existen pastillas desparasitantes con sabor a carne o palatables", "vienen desparasitantes felinos en presentación de jarabe o pasta", "cuál es el mejor formato de desparasitante para un gatito bebé", "qué formato de desparasitante es más cómodo para un gato difícil",
+                "existen inyecciones para desparasitar gatos en el veterinario", "sirven los collares antiparasitarios contra parásitos internos o solo pulgas", "cuál es la diferencia entre desparasitación interna y externa en gatos", "qué desparasitante de amplio espectro cubre todo en una sola dosis",
+                "qué formatos hay para desparasitar a una gata de interior", "cada cuánto tiempo se debe desparasitar a un gato adulto", "cuál es el calendario recomendado de desparasitación felina", "a qué edad se desparasita a un gatito por primera vez", "cada cuántos meses hay que darle el desparasitante a una gata", "los gatos que no salen de casa necesitan desparasitarse",
+                "por qué hay que desparasitar a una gata casera de interior", "qué parásitos intestinales comunes tienen los gatos y gatas", "síntomas de que mi gato tiene lombrices o parásitos internos", "cómo saber si mi gata necesita desparasitante", "el desparasitante de gatos se vende sin receta en veterinarias", "qué diferencia hay entre pipeta, pastilla y pasta desparasitante",
+                "cuál es el formato de desparasitante menos estresante para una gata", "qué marcas o tipos de pipeta desparasitante se recomiendan", "es mejor desparasitar con pipeta o con tableta oral a un gato", "qué desparasitante líquido es seguro para felinos", "por qué no se debe usar desparasitante de perro en gatos", "las pipetas para perro son tóxicas en gatas por las permetrinas",
+                "debo desparasitar a mi gato antes de ponerle sus vacunas", "por qué se desparasita a la gata antes de vacunarla", "qué desparasitante es seguro para gatas embarazadas o lactantes", "guía de presentaciones y tipos de desparasitantes para gatos", "información sobre formatos de antiparasitarios felinos", "qué opciones de desparasitante oral existen en el mercado", "diferencias entre antiparasitarios de pipeta y tomados",
+                "qué desparasitante combate la tenia o dipylidium en gatos", "frecuencia de desparasitación para gatos de patio y de casa", "qué contiene una pipeta de desparasitación combinada", "cómo elegir el mejor formato de desparasitante para mi gata", "tipos de medicamentos para lombrices y parásitos en felinos", "cuál es el catálogo de desparasitantes disponibles para gatos"
             ],
             "responses": [
                 "La industria veterinaria ha diversificado estas presentaciones porque sabe perfectamente que darle medicamentos por la boca a un gato puede ser una tarea muy estresante. /n Pipetas de aplicación tópica (Spot-on) es actualmente el formato más popular y cómodo. Es un dispositivo plástico con un líquido que se aplica directamente sobre la piel de la nuca del gato (separando el pelo para que no lo lama) Las pipetas modernas de marcas comerciales o clínicas veterinarias suelen ser de espectro combinado. Esto significa que, con un solo líquido en la piel, desparasitas al gato tanto por fuera (pulgas, garrapatas, ácaros) como por dentro (lombrices intestinales) \n Las astillas , son las tradicionales tabletas compactas que se administran por vía oral, muchos gatos botan espuma o baba blanca si prueban el sabor amargo de una pastilla o jarabe. Es un reflejo por mal sabor, no necesariamente una intoxicación, pero con un premio luego de administrar el desparacitante se evita por completo."
